@@ -357,7 +357,7 @@ public class Arepikov_Mechanum_Auton extends LinearOpMode{
     // considering the above function works at all powers, 
     // this would mainly be used to dial in the accuracy tighter. 
     // if you're not careful the robot will skip over the accuracy and will spin forever
-    // use at your own list.
+    // use at your own risk.
     */
     private void turn(double power, double accuracy, double turnAngle)
     {
@@ -415,28 +415,6 @@ public class Arepikov_Mechanum_Auton extends LinearOpMode{
     void changeLiftPosition(int changeAmount) {
         liftPosition += changeAmount;
     }
-    
-    /*
-    private boolean hasElement(double inDist, int iteration)
-    {
-        int count = 0;
-        for (int i = 0; i < iteration; i++)
-        {
-            double dist = getDistance();
-            if (dist < inDist)
-            {
-                count +=1;
-            }
-        }
-        double percent = count/iteration;
-        return percent>0.8 ;
-    }
-    
-    private int barcode()
-    {
-        int bar = 1;
-        return bar;
-    }*/
     
     //identify barcode
     public int barcode(float line1, float line2){

@@ -274,22 +274,24 @@ public class Arepikov_Mechanum_Teleop extends LinearOpMode{
     }
     
     
-    
-    //void liftPower() {
-    //    int moveDist = 350;
-    //    
-    //    if (gamepad2.dpad_up && getTime() - switchTime1 > 1000) {
-    //        liftPosition -= moveDist;
-    //        switchTime1 = getTime();
-    //    } else if (gamepad2.dpad_down && getTime() - switchTime1 > 1000) {
-    //        liftPosition += moveDist;
-    //        switchTime1 = getTime();
-    //    }
-    //    
-    //    int stickMod = (int)(gamepad2.left_stick_y * 10 + 0.1);
-    //    
-    //    liftPosition += stickMod;
-    //}
+    /*
+    //an attempt to make the lift have distinct levels
+    //ended up being more effort for the drivers than a simple power control. 
+    void liftPower() {
+        int moveDist = 350;
+        
+        if (gamepad2.dpad_up && getTime() - switchTime1 > 1000) {
+            liftPosition -= moveDist;
+            switchTime1 = getTime();
+        } else if (gamepad2.dpad_down && getTime() - switchTime1 > 1000) {
+            liftPosition += moveDist;
+            switchTime1 = getTime();
+        }
+        
+        int stickMod = (int)(gamepad2.left_stick_y * 10 + 0.1);
+        
+        liftPosition += stickMod;
+    }*/
     void liftPower() {
         motor[6] = gamepad2.left_stick_y;
     }
@@ -298,6 +300,8 @@ public class Arepikov_Mechanum_Teleop extends LinearOpMode{
     
     void intakePower() { 
         /*
+	//an attempt to make the intake only stop at certain points in its rotation
+	//the intake ended up being redesigned so it was useless. 
         if(gamepad2.a && 
             intake.getCurrentPosition() + 200 > intake.getTargetPosition() ) {
             intake.setTargetPosition(intake.getTargetPosition() - 100);
