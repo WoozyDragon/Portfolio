@@ -2,6 +2,8 @@ A collection of 3D models for Octobot.
 
 All parts listed in the "Parts" folder are standard REV files, with the exception of 276-3526-004 Main Disk.ipt which is a VEX wheel. Note that only the essential component of this model was kept to reduce lag. 
 
+The export folder contains a STEP file of the entire robot. 
+
 A list of models:
 - Basic Bracket.ipt: A custom pulley holder. Designed by another team member. 
 - BracketL.ipt: A part designed to attach to the core and hold the lift motor. Designed by Marcus Lam. 
